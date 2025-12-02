@@ -194,3 +194,57 @@ The project includes sales insights and product-level analytics such as those sh
 ---
 
 ## 📦 Repository Structure
+```
+0_data/
+│
+├── 1_parent_company/
+│   ├── full_load/
+│   └── incremental_load/
+│
+├── 2_child_company/
+│   ├── full_load/
+│   │   ├── customers/
+│   │   ├── gross_price/
+│   │   ├── orders/
+│   │   └── products/
+│   └── incremental_load/
+│
+1_codes/
+│
+├── 1_setup/
+│   ├── dim_date_table_creation.ipynb
+│   ├── setup_catalog.ipynb
+│   └── utilities.ipynb
+│
+├── 2_dimension_data_processing/
+│   ├── 1_customers_data_processing.ipynb
+│   ├── 2_products_data_processing.ipynb
+│   └── 3_pricing_data_processing.ipynb
+│
+├── 3_fact_data_processing/
+│   ├── 1_full_load_fact.ipynb
+│   └── 2_incremental_load_fact.ipynb
+│
+2_dashboarding/
+│   ├── Dashboard_full
+│   ├── Dashboard_p1
+│   ├── Dashboard_p2
+│   ├── denormalise_table_query_fmcg.txt
+│   ├── fmcg_dashboard.pdf
+│   └── README.md (dashboard documentation)
+│
+resources/
+│   ├── databricks_project.excalidraw
+│   └── project_architecture.png
+
+```
+
+# 🙌 Conclusion
+This repository provides a **complete, scalable Databricks Lakehouse blueprint** for integrating an acquired company’s data into an enterprise analytics ecosystem.  
+It combines:
+- Medallion architecture  
+- Full + incremental ingestion pipelines  
+- Dimension & fact processing  
+- Governance via Unity Catalog  
+- Gold-layer merging  
+- Enterprise dashboards  
